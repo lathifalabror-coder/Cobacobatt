@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sano Sinichiro | Guru Kelas 4 SDN SIMO</title>
+
+    <meta name="description"
+          content="Website portofolio Sano Sinichiro, Guru Kelas 4 SDN SIMO, Ngawi. Berisi profil, pengalaman, karya, konten edukasi dan media pembelajaran.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f8fbff;
+            color: #17324d;
+            line-height: 1.7;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+
+        /* =========================================
+           VARIABLES
+        ========================================= */
+
+        :root {
+            --blue: #1769d2;
+            --dark-blue: #103d73;
+            --light-blue: #eaf4ff;
+            --green: #35a76f;
+            --light-green: #eaf9f1;
+            --yellow: #ffc83d;
+            --white: #ffffff;
+            --dark: #17324d;
+            --gray: #64748b;
+            --light-gray: #f4f7fb;
+            --shadow: 0 15px 40px rgba(27, 79, 132, 0.10);
+            --radius: 22px;
+        }
+
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
+
+        .container {
+            width: 90%;
+            max-width: 1180px;
+            margin: auto;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        nav {
+            height: 78px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 14px;
+            background: var(--blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+        }
+
+        .logo-text h3 {
+            color: var(--dark-blue);
+            font-size: 17px;
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            font-size: 10px;
+            color: var(--gray);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            font-size: 13px;
+            font-weight: 500;
+            color: #40566d;
+            transition: .3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--blue);
+        }
+
+        .nav-button {
+            background: var(--blue) !important;
+            color: white !important;
+            padding: 10px 18px;
+            border-radius: 30px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+            color: var(--dark-blue);
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 120px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 10% 20%, #e6f3ff 0%, transparent 30%),
+                radial-gradient(circle at 90% 70%, #e8f9ef 0%, transparent 30%),
+                #ffffff;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .hero-text .small-title {
+            color: var(--blue);
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(42px, 6vw, 70px);
+            line-height: 1.1;
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 25px;
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .hero-text p {
+            max-width: 600px;
+            color: var(--gray);
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: .3s;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(23,105,210,.25);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--blue);
+            color: var(--blue);
+        }
+
+        .btn-outline:hover {
+            background: var(--blue);
+            color: white;
+        }
+
+
+        /* HERO IMAGE */
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-photo {
+            width: 390px;
+            height: 470px;
+            object-fit: cover;
+            border-radius: 190px 190px 30px 30px;
+            box-shadow: var(--shadow);
+            border: 10px solid white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .shape-blue {
+            width: 300px;
+            height: 300px;
+            background: #dceeff;
+            top: 0;
+            right: 5%;
+        }
+
+        .shape-green {
+            width: 150px;
+            height: 150px;
+            background: #dff7e9;
+            bottom: 0;
+            left: 0;
+        }
+
+        .quote-box {
+            position: absolute;
+            z-index: 4;
+            bottom: 30px;
+            left: 0;
+            background: white;
+            padding: 18px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            max-width: 240px;
+        }
+
+        .quote-box i {
+            color: var(--yellow);
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .quote-box p {
+            font-size: 12px;
+            color: var(--gray);
+        }
+
+
+        /* =========================================
+           SECTION
+        ========================================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header span {
+            color: var(--blue);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-header h2 {
+            font-size: 35px;
+            color: var(--dark-blue);
+            margin: 8px 0;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            max-width: 650px;
+            margin: auto;
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           PROFIL
+        ========================================= */
+
+        .about {
+            background: var(--light-gray);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: .8fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-card {
+            background: white;
+            padding: 35px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-card h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: var(--gray);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .info-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 12px;
+            border-radius: 13px;
+            background: var(--light-blue);
+        }
+
+        .info-item i {
+            color: var(--blue);
+            width: 25px;
+        }
+
+        .info-item strong {
+            display: block;
+            font-size: 11px;
+            color: var(--gray);
+        }
+
+        .info-item span {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .about-visual {
+            position: relative;
+        }
+
+        .about-visual img {
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            border-radius: 30px;
+        }
+
+
+        /* =========================================
+           FEATURE CARDS
+        ========================================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: .3s;
+            border: 1px solid #edf2f7;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(27,79,132,.15);
+        }
+
+        .card-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            background: var(--light-blue);
+            color: var(--blue);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .card:nth-child(2) .card-icon {
+            background: var(--light-green);
+            color: var(--green);
+        }
+
+        .card:nth-child(3) .card-icon {
+            background: #fff5d9;
+            color: #e5a800;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--dark-blue);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .card-link {
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           EDUKASI
+        ========================================= */
+
+        .education {
+            background: var(--light-gray);
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .education-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: .3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .education-image {
+            height: 180px;
+            background: linear-gradient(135deg,#dff0ff,#e9f9ef);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            color: var(--blue);
+        }
+
+        .education-content {
+            padding: 22px;
+        }
+
+        .category {
+            font-size: 10px;
+            color: var(--green);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .education-content h3 {
+            font-size: 17px;
+            margin: 5px 0 8px;
+            color: var(--dark-blue);
+        }
+
+        .education-content p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================
+           PENGALAMAN
+        ========================================= */
+
+        .timeline {
+            max-width: 800px;
+            margin: auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #dceeff;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 65px;
+            margin-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 8px;
+            top: 5px;
+            width: 28px;
+            height: 28px;
+            background: var(--blue);
+            border: 5px solid #e0efff;
+            border-radius: 50%;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-content small {
+            color: var(--green);
+            font-weight: 600;
+        }
+
+        .timeline-content h3 {
+            color: var(--dark-blue);
+            margin: 5px 0;
+        }
+
+        .timeline-content p {
+            font-size: 13px;
+            color: var(--gray);
+        }
+
+
+        /* =========================================
+           PRESTASI
+        ========================================= */
+
+        .achievement {
+            background: var(--light-gray);
+        }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .achievement-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .achievement-card i {
+            font-size: 40px;
+            color: var(--yellow);
+            margin-bottom: 15px;
+        }
+
+        .achievement-card h3 {
+            color: var(--dark-blue);
+            font-size: 17px;
+        }
+
+        .achievement-card p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+
+        /* =========================================
+           MEDIA PEMBELAJARAN
+        ========================================= */
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .media-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            border: 1px solid #edf2f7;
+        }
+
+        .media-icon {
+            height: 150px;
+            border-radius: 15px;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+            color: var(--blue);
+            margin-bottom: 18px;
+        }
+
+        .media-card h3 {
+            color: var(--dark-blue);
+            font-size: 17px;
+        }
+
+        .media-card p {
+            font-size: 12px;
+            color: var(--gray);
+            margin: 8px 0 15px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact {
+            background: linear-gradient(135deg,#0f4d91,#1769d2);
+            color: white;
+        }
+
+        .contact .section-header span,
+        .contact .section-header h2,
+        .contact .section-header p {
+            color: white;
+        }
+
+        .contact-box {
+            max-width: 850px;
+            margin: auto;
+            background: white;
+            border-radius: 25px;
+            padding: 40px;
+            color: var(--dark);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-info h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--light-blue);
+            color: var(--blue);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: var(--light-blue);
+            color: var(--blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .3s;
+        }
+
+        .social a:hover {
+            background: var(--blue);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .contact-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: var(--light-green);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .contact-button i {
+            font-size: 45px;
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .contact-button h3 {
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+
+        .contact-button p {
+            color: var(--gray);
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #092d53;
+            color: white;
+            text-align: center;
+            padding: 25px 10px;
+        }
+
+        footer p {
+            font-size: 12px;
+            opacity: .8;
+        }
+
+
+        /* =========================================
+           ANIMATION
+        ========================================= */
+
+        .fade-up {
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 900px) {
+
+            .nav-menu {
+                position: absolute;
+                top: 78px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 25px;
+                gap: 20px;
+                display: none;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .hero-image {
+                margin-top: 20px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .education-grid,
+            .achievement-grid,
+            .media-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .contact-box {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: 92%;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .hero {
+                padding-top: 110px;
+            }
+
+            .hero-text h1 {
+                font-size: 43px;
+            }
+
+            .hero-text h2 {
+                font-size: 21px;
+            }
+
+            .hero-photo {
+                width: 280px;
+                height: 350px;
+            }
+
+            .quote-box {
+                left: 5px;
+                bottom: 10px;
+                max-width: 200px;
+            }
+
+            .cards,
+            .education-grid,
+            .achievement-grid,
+            .media-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .contact-box {
+                padding: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <a href="#beranda" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h3>Sano Sinichiro</h3>
+                    <span>Guru Kelas 4 • SDN SIMO</span>
+                </div>
+
+            </a>
+
+
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li>
+                    <a href="#beranda">Beranda</a>
+                </li>
+
+                <li>
+                    <a href="#profil">Profil</a>
+                </li>
+
+                <li>
+                    <a href="#edukasi">Konten Edukasi</a>
+                </li>
+
+                <li>
+                    <a href="#pengalaman">Pengalaman</a>
+                </li>
+
+                <li>
+                    <a href="#prestasi">Prestasi/Karya</a>
+                </li>
+
+                <li>
+                    <a href="#media">Media Pembelajaran</a>
+                </li>
+
+                <li>
+                    <a href="#kontak" class="nav-button">
+                        Hubungi Saya
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     BERANDA
+========================================= -->
+
+<section class="hero" id="beranda">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text fade-up">
+
+                <div class="small-title">
+                    <i class="fa-solid fa-school"></i>
+                    Pendidik • Pembelajar • Inspirator
+                </div>
+
+                <h1>
+                    Sano<br>
+                    Sinichiro
+                </h1>
+
+                <h2>
+                    Guru Kelas 4
+                </h2>
+
+                <p>
+                    Menciptakan pembelajaran yang bermakna,
+                    menyenangkan, dan berpusat pada murid.
+                    Bersama anak-anak, belajar, bertumbuh,
+                    dan mewujudkan masa depan yang lebih baik.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#profil" class="btn btn-primary">
+                        <i class="fa-solid fa-user"></i>
+                        Lihat Profil
+                    </a>
+
+                    <a href="#edukasi" class="btn btn-outline">
+                        <i class="fa-solid fa-book"></i>
+                        Jelajahi Edukasi
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="hero-image">
+
+                <!--
+                    GANTI URL FOTO DI BAWAH INI
+                    dengan foto guru
+                -->
+
+                <img
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                    alt="Sano Sinichiro"
+                    class="hero-photo"
+                >
+
+                <div class="shape shape-blue"></div>
+                <div class="shape shape-green"></div>
+
+
+                <div class="quote-box">
+
+                    <i class="fa-solid fa-quote-left"></i>
+
+                    <p>
+                        "Setiap anak adalah bintang
+                        dengan cahaya yang unik.
+                        Tugas kita adalah membantunya
+                        bersinar."
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PROFIL
+========================================= -->
+
+<section class="about" id="profil">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Tentang Saya</span>
+
+            <h2>Profil Guru</h2>
+
+            <p>
+                Mengenal lebih dekat sosok pendidik
+                dan perjalanan dalam dunia pendidikan.
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-visual">
+
+                <img
+                    src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80"
+                    alt="Guru"
+                >
+
+            </div>
+
+
+
+            <div class="about-card">
+
+                <h3>
+                    Halo, saya Sano Sinichiro 👋
+                </h3>
+
+                <p>
+                    Saya adalah seorang guru yang memiliki
+                    semangat untuk menciptakan pengalaman
+                    belajar yang menyenangkan, bermakna,
+                    dan sesuai dengan kebutuhan murid.
+                </p>
+
+                <p>
+                    Bagi saya, pendidikan bukan hanya tentang
+                    menyampaikan materi, tetapi juga membantu
+                    setiap anak menemukan potensi terbaiknya.
+                </p>
+
+
+                <div class="info-list">
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        <div>
+                            <strong>Nama</strong>
+                            <span>Sano Sinichiro</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-chalkboard-user"></i>
+
+                        <div>
+                            <strong>Jabatan</strong>
+                            <span>Guru Kelas 4</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-school"></i>
+
+                        <div>
+                            <strong>Sekolah</strong>
+                            <span>SDN SIMO</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+                            <strong>Kabupaten/Kota</strong>
+                            <span>Ngawi</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     KONTEN EDUKASI
+========================================= -->
+
+<section id="edukasi">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Belajar Bersama</span>
+
+            <h2>Konten Edukasi</h2>
+
+            <p>
+                Kumpulan materi dan informasi pembelajaran
+                yang dapat digunakan untuk mendukung proses belajar.
+            </p>
+
+        </div>
+
+
+        <div class="education-grid">
+
+
+            <div class="education-card">
+
+                <div class="education-image">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+
+                <div class="education-content">
+
+                    <span class="category">
+                        Matematika
+                    </span>
+
+                    <h3>
+                        Belajar Matematika Menyenangkan
+                    </h3>
+
+                    <p>
+                        Materi dan aktivitas matematika
+                        untuk membantu murid memahami
+                        konsep dengan cara yang menyenangkan.
+                    </p>
+
+                    <!-- GANTI LINK -->
+                    <a href="https://drive.google.com/"
+                       target="_blank"
+                       class="card-link">
+                        Buka Materi →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="education-card">
+
+                <div class="education-image">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+
+                <div class="education-content">
+
+                    <span class="category">
+                        IPAS
+                    </span>
+
+                    <h3>
+                        Eksplorasi Sains di Sekitar Kita
+                    </h3>
+
+                    <p>
+                        Menghubungkan pembelajaran sains
+                        dengan kehidupan sehari-hari.
+                    </p>
+
+                    <!-- GANTI LINK -->
+                    <a href="https://drive.google.com/"
+                       target="_blank"
+                       class="card-link">
+                        Buka Materi →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="education-card">
+
+                <div class="education-image">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                </div>
+
+                <div class="education-content">
+
+                    <span class="category">
+                        Literasi
+                    </span>
+
+                    <h3>
+                        Membangun Budaya Literasi
+                    </h3>
+
+                    <p>
+                        Aktivitas literasi untuk membantu
+                        murid membaca, memahami, dan berpikir kritis.
+                    </p>
+
+                    <!-- GANTI LINK -->
+                    <a href="https://drive.google.com/"
+                       target="_blank"
+                       class="card-link">
+                        Buka Materi →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PENGALAMAN
+========================================= -->
+
+<section id="pengalaman">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Perjalanan</span>
+
+            <h2>Pengalaman</h2>
+
+            <p>
+                Perjalanan dan pengalaman dalam mengembangkan
+                pembelajaran dan pendidikan.
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <small>
+                        PENDIDIKAN
+                    </small>
+
+                    <h3>
+                        Guru Kelas 4
+                    </h3>
+
+                    <p>
+                        Melaksanakan pembelajaran,
+                        pendampingan, dan pengembangan
+                        potensi murid kelas 4.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <small>
+                        PEMBELAJARAN
+                    </small>
+
+                    <h3>
+                        Pengembangan Media Pembelajaran
+                    </h3>
+
+                    <p>
+                        Mengembangkan media dan aktivitas
+                        pembelajaran yang kreatif,
+                        interaktif, dan menarik.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-content">
+
+                    <small>
+                        PENGEMBANGAN DIRI
+                    </small>
+
+                    <h3>
+                        Belajar dan Berbagi
+                    </h3>
+
+                    <p>
+                        Terus belajar, mengikuti perkembangan
+                        pendidikan, dan berbagi praktik baik
+                        dalam pembelajaran.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     PRESTASI / KARYA
+========================================= -->
+
+<section class="achievement" id="prestasi">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Pencapaian</span>
+
+            <h2>Prestasi & Karya</h2>
+
+            <p>
+                Dokumentasi karya, inovasi, dan pencapaian
+                dalam dunia pendidikan.
+            </p>
+
+        </div>
+
+
+        <div class="achievement-grid">
+
+
+            <div class="achievement-card">
+
+                <i class="fa-solid fa-trophy"></i>
+
+                <h3>
+                    Karya Pembelajaran
+                </h3>
+
+                <p>
+                    Pengembangan perangkat dan media
+                    pembelajaran kreatif.
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <h3>
+                    Inovasi Pendidikan
+                </h3>
+
+                <p>
+                    Menciptakan ide pembelajaran yang
+                    menarik dan bermakna.
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-card">
+
+                <i class="fa-solid fa-award"></i>
+
+                <h3>
+                    Pengembangan Profesional
+                </h3>
+
+                <p>
+                    Komitmen untuk terus berkembang
+                    sebagai seorang pendidik.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     MEDIA PEMBELAJARAN
+========================================= -->
+
+<section id="media">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Belajar Digital</span>
+
+            <h2>Media Pembelajaran</h2>
+
+            <p>
+                Akses berbagai media pembelajaran
+                digital yang dapat digunakan oleh murid.
+            </p>
+
+        </div>
+
+
+        <div class="media-grid">
+
+
+            <div class="media-card">
+
+                <div class="media-icon">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+
+                <h3>
+                    Video Pembelajaran
+                </h3>
+
+                <p>
+                    Kumpulan video pembelajaran
+                    yang tersedia di YouTube.
+                </p>
+
+                <!-- GANTI LINK YOUTUBE -->
+                <a href="https://www.youtube.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+
+                    <i class="fa-brands fa-youtube"></i>
+                    Lihat Video
+
+                </a>
+
+            </div>
+
+
+
+            <div class="media-card">
+
+                <div class="media-icon">
+                    <i class="fa-solid fa-file-powerpoint"></i>
+                </div>
+
+                <h3>
+                    PPT Pembelajaran
+                </h3>
+
+                <p>
+                    Materi presentasi yang dapat
+                    digunakan dalam kegiatan belajar.
+                </p>
+
+                <!-- GANTI LINK GOOGLE DRIVE -->
+                <a href="https://drive.google.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+
+                    <i class="fa-solid fa-folder-open"></i>
+                    Buka Drive
+
+                </a>
+
+            </div>
+
+
+
+            <div class="media-card">
+
+                <div class="media-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <h3>
+                    LKPD & Bahan Ajar
+                </h3>
+
+                <p>
+                    Lembar kerja dan bahan ajar
+                    untuk mendukung kegiatan pembelajaran.
+                </p>
+
+                <!-- GANTI LINK GOOGLE DRIVE -->
+                <a href="https://drive.google.com/"
+                   target="_blank"
+                   class="btn btn-primary">
+
+                    <i class="fa-solid fa-download"></i>
+                    Akses LKPD
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     KONTAK
+========================================= -->
+
+<section class="contact" id="kontak">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <span>Komunikasi</span>
+
+            <h2>Mari Terhubung</h2>
+
+            <p>
+                Terbuka untuk berbagi, berdiskusi,
+                dan berkolaborasi dalam dunia pendidikan.
+            </p>
+
+        </div>
+
+
+        <div class="contact-box">
+
+
+            <div class="contact-info">
+
+                <h3>
+                    Hubungi Saya
+                </h3>
+
+                <p>
+                    Silakan hubungi saya melalui
+                    kontak yang tersedia.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-school"></i>
+
+                    <div>
+                        <strong>Sekolah</strong>
+                        <p>SDN SIMO</p>
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+                        <strong>Lokasi</strong>
+                        <p>Ngawi, Jawa Timur</p>
+                    </div>
+
+                </div>
+
+
+                <div class="social">
+
+                    <!-- GANTI LINK SOSIAL MEDIA -->
+
+                    <a href="https://www.youtube.com/"
+                       target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#"
+                       target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#"
+                       target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="contact-button">
+
+                <i class="fa-brands fa-whatsapp"></i>
+
+                <h3>
+                    Ingin Berkomunikasi?
+                </h3>
+
+                <p>
+                    Hubungi saya secara langsung
+                    melalui WhatsApp.
+                </p>
+
+
+                <!--
+                    GANTI 628xxxxxxxxxx
+                    dengan nomor WhatsApp.
+                    Format:
+                    628xxxxxxxxxx
+                    tanpa tanda +
+                -->
+
+                <a
+                    href="https://wa.me/628xxxxxxxxxx?text=Halo%20Pak%20Sano,%20saya%20ingin%20berkomunikasi."
+                    target="_blank"
+                    class="btn btn-primary">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Chat WhatsApp
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    <p>
+        © 2026 Sano Sinichiro • Guru Kelas 4 SDN SIMO • Ngawi
+    </p>
+
+    <p>
+        Belajar • Bertumbuh • Menginspirasi
+    </p>
+
+</footer>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+    // ===============================
+    // MENU MOBILE
+    // ===============================
+
+    const menuToggle =
+        document.getElementById("menuToggle");
+
+    const navMenu =
+        document.getElementById("navMenu");
+
+
+    menuToggle.addEventListener("click", function() {
+
+        navMenu.classList.toggle("active");
+
+    });
+
+
+    // Tutup menu setelah link diklik
+
+    document.querySelectorAll(".nav-menu a")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                navMenu.classList.remove("active");
+
+            });
+
+        });
+
+
+    // ===============================
+    // ANIMASI SCROLL
+    // ===============================
+
+    const observer =
+        new IntersectionObserver(
+            function(entries) {
+
+                entries.forEach(function(entry) {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.style.opacity = "1";
+                        entry.target.style.transform = "translateY(0)";
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+
+    document.querySelectorAll(".card, .education-card, .media-card, .achievement-card, .timeline-item")
+        .forEach(function(element) {
+
+            element.style.opacity = "0";
+            element.style.transform = "translateY(25px)";
+            element.style.transition = "all .7s ease";
+
+            observer.observe(element);
+
+        });
+
+</script>
+
+
+</body>
+</html>
